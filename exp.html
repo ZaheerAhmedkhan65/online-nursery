@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button on Hover - Multiple Images</title>
+<style>
+  .image-container {
+    position: relative;
+    display: inline-block; /* This will allow multiple image containers to be side by side */
+    margin: 10px; /* Optional: adds some space around each image */
+  }
+
+  .image-container img {
+    display: block; /* Remove default image bottom margin/spacing */
+    width: 100%; /* Make image fill the container */
+    height: auto;
+  }
+
+  .btn {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .image-container:hover .btn {
+    display: block; /* Only show the button when the specific image container is hovered */
+  }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="pot1.jpg" alt="Image 1">
+  <button class="btn">Button 1</button>
+</div>
+
+<div class="image-container">
+  <img src="pot2.jpg" alt="Image 2">
+  <button class="btn">Button 2</button>
+</div>
+
+<div class="image-container">
+  <img src="pot3.jpg" alt="Image 3">
+  <button class="btn">Button 3</button>
+</div>
+
+<!-- Add more images and buttons as needed -->
+
+</body>
+</html>
